@@ -10,6 +10,24 @@ import (
 )
 
 func main() {
+	// define flags
+
+	// Parse flags
+
+	// Show usage if flags are invalid
+
+	// Conditionally read from stdin
+
+	// Optionally print flags and exit based on DEBUG environment variables
+
+	// Generate message
+
+	// Either preview message or write to file
+
+	// Write content
+}
+
+func main() {
 	f, err := os.OpenFile("/etc/motd", os.O_WRONLY, 644)
 
 	if err != nil {

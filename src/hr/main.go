@@ -43,7 +43,7 @@ func main() {
 		output.Write([]byte("name,id,home,shell\n"))
 		writer := csv.NewWriter(output)
 		for _, user := range users {
-			err := writer.Write([]string{user.Name, strconv.Itoa(user.Id), user.Home, user.Shell})
+			err := writer.Write([]string{user.Name, strconv.Itoa(user.ID), user.Home, user.Shell})
 			handleError(err)
 		}
 		writer.Flush()
@@ -95,7 +95,7 @@ func collectUsers() (users []User) {
 
 		user := User{
 			Name:  line[0],
-			Id:    int(id),
+			ID:    int(id),
 			Home:  line[5],
 			Shell: line[6],
 		}

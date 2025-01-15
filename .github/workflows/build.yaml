@@ -1,0 +1,34 @@
+---
+name: Build Go Projects
+
+on:
+  push:
+    paths:
+      - 'src/**'
+  pull_request:
+    paths:
+      - 'src/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.19'
+
+      - name: Build all projects
+        run: |
+          for dir in src/*/; do
+            if [ -f "$dir/go.mod" ]; then
+              echo "Building $dir"
+              cd "$dir"
+              go build ./...
+              cd -
+            fi
+          done

@@ -1,0 +1,10 @@
+Jan 16 21:09:03 daedalus EMERGENCY Could not retrieve DisableProxy value: c0000225
+Jan 16 21:09:03 daedalus EMERGENCY ConnectWithProxy: Unable to get application proxy host from CsConfig: c0000225
+Jan 16 21:09:03 daedalus CRITICAL SslConnect: Unable to connect to ts01-gyr-maverick.cloudsink.net:443 via Application Proxy: c0000225
+Jan 16 21:09:03 daedalus DEBUG trying to connect to ts01-gyr-maverick.cloudsink.net:443
+Jan 16 21:09:03 daedalus INFO Connected directly to ts01-gyr-maverick.cloudsink.net:443
+Jan 16 21:09:03 daedalus INFO ValidateCertificate: Certificate verified!
+Jan 16 21:09:03 daedalus INFO SSLSocket connected successfully to ts01-gyr-maverick.cloudsink.net:443
+Jan 16 21:09:03 daedalus INFO sock/ssl/proxy cnctd ok. First send to cloud.
+Jan 16 21:09:03 daedalus INFO CLOUDPROTO_ESTABLISHED. AgentId unchanged
+Jan 16 21:09:03 daedalus INFO ConnectToCloud successful.
